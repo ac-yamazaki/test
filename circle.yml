@@ -7,7 +7,7 @@ deployment:
   deploy:
     branch: master
     codedeploy:
-      codedeploy-aplication-name: test-app
+      test-app:
         application_root: /
         region: ap-northeast-1
         revision_location:

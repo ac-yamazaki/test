@@ -11,8 +11,8 @@ deployment:
         application_root: ~/
         region: ap-northeast-1
         revision_location:
-          revision_type: S3         # デプロイ履歴のソースコードをs3に保存する
+          revision_type: S3
           s3_location:
-            bucket: test-codedeploy-bucket2     # デプロイ履歴のソースコードを保存するbucket名
-            key_pattern: {BRANCH}-{SHORT_COMMIT}.zip    # 保存時のファイル名
+            bucket: test-codedeploy-bucket2
+            key_pattern: {BRANCH}-{SHORT_COMMIT}.zip
         deployment_group: test-deploy

@@ -10,5 +10,5 @@ deployment:
     codedeploy:
       test-app:
         region: ap-northeast-1
-        deployment_group: my-deployment-group
+        deployment_group: test-deploy
 

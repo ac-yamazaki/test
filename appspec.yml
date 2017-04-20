@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/campaign-app
+    destination: /var/www/test-app
 hooks:
   BeforeInstall:
     - location: scripts/BeforeInstall.sh

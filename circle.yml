@@ -5,9 +5,9 @@ test:
 
 deployment:
   deploy:
-    branch: master                  # デプロイ対象にするブランチ名
-    codedeploy:                     # circleciでCodeDeployを使う
-      codedeploy-aplication-name: test-app   # CodeDeployのアプリケーション名にする
+    branch: master
+    codedeploy:
+      codedeploy-aplication-name: test-app
         application_root: /
         region: ap-northeast-1
         revision_location:

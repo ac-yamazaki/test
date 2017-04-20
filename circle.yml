@@ -14,6 +14,6 @@ deployment:
           revision_type: S3
           s3_location:
             bucket: test-codedeploy-bucket2
-            key_pattern: {BRANCH}-{SHORT_COMMIT}.zip
+            key_pattern: test/master/test-app-{BRANCH}-{SHORT_COMMIT}
         deployment_group: test-deploy
 

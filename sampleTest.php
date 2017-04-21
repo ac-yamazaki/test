@@ -1,21 +1,20 @@
 <?php
-require_once('./Sample.php');
+require_once('./index.php');
 class SampleTest extends PHPUnit_Framework_TestCase
 {
-   public function testハローワールド()
-    {
-        $Sample = new Sample();
-        $this->assertEquals($Sample->helloWorld(), 'hello world!');
-    }
+//    public function test()
+//     {
+//         $Sample = new Sample();
+//         $this->assertEquals($Sample->helloWorld(), 'hello world!');
+//     }
+
     /**
      * @test
      */
-   public function aaa()
+   public function testIndex()
     {
         $Sample = new Sample();
-	$Sample->helloWorld();
-        //$this->assertEquals($Sample->helloWorld(), 'hello world!');
+        $this->assertEquals($Sample->helloWorld(), 'hello world!');
 
-        $this->assertEquals(2, 1+1);
     }
 }

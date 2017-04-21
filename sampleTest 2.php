@@ -1,0 +1,21 @@
+<?php
+require_once('./Sample.php');
+class SampleTest extends PHPUnit_Framework_TestCase
+{
+   public function testハローワールド()
+    {
+        $Sample = new Sample();
+        $this->assertEquals($Sample->helloWorld(), 'hello world!');
+    }
+    /**
+     * @test
+     */
+   public function aaa()
+    {
+        $Sample = new Sample();
+	$Sample->helloWorld();
+        //$this->assertEquals($Sample->helloWorld(), 'hello world!');
+
+        $this->assertEquals(2, 1+1);
+    }
+}

@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   pre:
-    - sudo apt-get install package=7.0.9
+    - sudo apt-get install package=7.1.0
 
 test:
   override:

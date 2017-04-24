@@ -8,8 +8,8 @@ machine:
  
 test:
   override:
-#    - echo Hello World 
-    - phpunit SampleTest 
+    - echo Hello World 
+#    - phpunit SampleTest 
 
 # deployment:
 #  deploy:

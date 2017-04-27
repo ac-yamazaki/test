@@ -4,24 +4,27 @@ machine:
     version:7.1.3
 
 dependencies:
-  pre:
+  pre: 
+    - php -v
+    - phpenv global 7.1.3
+    - php -v
 #    - phpenv versions
 #    - sudo apt-get update
 #    - sudo apt-get install package=7.1.3
-    - sudo apt-get update
-    - sudo apt-get install -y gcc libpcre3-dev
-    - git clone -b 1.3.5 --depth 1 git@github.com:phalcon/cphalcon.git:
-    - sed -i "s/phpize /\/home\/ubuntu\/.phpenv\/shims\/phpize /g" cphalcon/build/install
-    - sed -i "s/configure /configure --with-php-config=\/home\/ubuntu\/.phpenv\/shims\/php-config /g" cphalcon/build/install
-    - sudo ./install:
-        pwd: cphalcon/build
-    - sudo sh -c "echo 'extension=phalcon.so' > /home/ubuntu/.phpenv/versions/5.5.21/etc/conf.d/phalcon.ini"
-    - sudo composer self-update
+#    - sudo apt-get update
+#    - sudo apt-get install -y gcc libpcre3-dev
+#    - git clone -b 1.3.5 --depth 1 git@github.com:phalcon/cphalcon.git:
+#    - sed -i "s/phpize /\/home\/ubuntu\/.phpenv\/shims\/phpize /g" cphalcon/build/install
+#    - sed -i "s/configure /configure --with-php-config=\/home\/ubuntu\/.phpenv\/shims\/php-config /g" cphalcon/build/install
+#    - sudo ./install:
+#        pwd: cphalcon/build
+#    - sudo sh -c "echo 'extension=phalcon.so' > /home/ubuntu/.phpenv/versions/5.5.21/etc/conf.d/phalcon.ini"
+#    - sudo composer self-update
 
 test:
   override:
-    - ../vendor/phpunit/phpunit/phpunit:
-        pwd: tests
+#    - ../vendor/phpunit/phpunit/phpunit:
+#        pwd: tests
     - echo Hello World 
     - phpunit SampleTest 
 

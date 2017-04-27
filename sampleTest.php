@@ -1,6 +1,8 @@
 <?php
+use vendor\phpunit\hpunit\src\Framework\TestCase;
+
 require_once('./index.php');
-class SampleTest extends PHPUnit_Framework_TestCase
+class SampleTest extends TestCase
 {
 //    public function test()
 //     {

@@ -1,7 +1,7 @@
 <?php
 use vendor/phpunit/hpunit/src/Framework/TestCase;
 
-require_once('./index.php');
+//require_once('./index.php');
 class SampleTest extends TestCase
 {
 //    public function test()

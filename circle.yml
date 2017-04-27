@@ -6,7 +6,7 @@ dependencies:
   pre:
 #    - phpenv versions
     - sudo apt-get update
-    - sudo apt-get install package=7.1.3
+#    - sudo apt-get install package=7.1.3
  
 test:
   override:

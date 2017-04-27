@@ -26,8 +26,9 @@ dependencies:
     - sed -i "s/phpize /\/home\/ubuntu\/.phpenv\/shims\/phpize /g" cphalcon/build/install
     - sed -i "s/configure /configure --with-php-config=\/home\/ubuntu\/.phpenv\/shims\/php-config /g" cphalcon/build/install
     - ls -l 
-    - ls -l cphalcon/build
-    - sudo cphalcon/build/install
+    - ls -l cphalcon
+    - sudo ./install:
+        pwd: cphalcon/build
     - sudo sh -c "echo 'extension=phalcon.so' > /home/ubuntu/.phpenv/versions/5.5.21/etc/conf.d/phalcon.ini"
     - sudo composer self-update
 

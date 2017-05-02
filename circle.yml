@@ -10,6 +10,7 @@ dependencies:
     - php -v
     - phpunit --version
     - phpenv versions
+    - ls -l /home/ubuntu/test/
 #    - sudo apt-get update
 #    - sudo apt-get install package=7.1.3
 #    - sudo apt-get update

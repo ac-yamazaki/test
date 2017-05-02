@@ -1,5 +1,5 @@
 <?php
-use vendor\phpunit\phpunit\src\Framework\TestCase;
+//use vendor\phpunit\phpunit\src\Framework\TestCase;
 
 //require_once('./index.php');
 class SampleTest extends TestCase

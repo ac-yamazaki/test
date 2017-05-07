@@ -5,19 +5,20 @@ machine:
 
 dependencies:
   pre: 
+    - phpenv versions
     - php -v
     - phpenv global 7.1.3
     - php -v
-    - phpunit --version
     - phpenv versions
-    - ls -l /
-    - ls -l /opt
-    - ls -l /var
-    - ls -l /etc
-    - ls -l /home
-    - ls -l /home/ubuntu/
-    - ls -l /home/ubuntu/test/
-    - ls -l /home/ubuntu/test/tests.php
+    - phpunit --version
+#    - ls -l /
+#    - ls -l /opt
+#    - ls -l /var
+#    - ls -l /etc
+#    - ls -l /home
+#    - ls -l /home/ubuntu/
+#    - ls -l /home/ubuntu/test/
+#    - ls -l /home/ubuntu/test/tests.php
 #    - ls -l vendor\phpunit\phpunit\src\Framework\
 #    - ls -l vendor\phpunit\phpunit\src\Framework\TestCase
 
@@ -67,4 +68,4 @@ test:
 #            bucket: test-codedeploy-bucket2
 #            key_pattern: test/master/test-app-{BRANCH}-{SHORT_COMMIT}
 #        deployment_group: test-deploy-group
-
+#

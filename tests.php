@@ -17,7 +17,7 @@ class SampleTest extends TestCase
    public function testIndex()
     {
         $Sample = new Sample();
-        $this->assertEquals($Sample->helloWorld(), 'hello world!');
+        $this->assertEquals($Sample->helloWorld(), 'hello world!!');
 
     }
 }

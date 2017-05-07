@@ -11,6 +11,9 @@ dependencies:
     - phpunit --version
     - phpenv versions
     - ls -l /
+    - ls -l /opt
+    - ls -l /var
+    - ls -l /home
     - ls -l /home/ubuntu/test/tests.php
 #    - ls -l vendor\phpunit\phpunit\src\Framework\
 #    - ls -l vendor\phpunit\phpunit\src\Framework\TestCase

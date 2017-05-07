@@ -10,7 +10,7 @@ dependencies:
     - php -v
     - phpunit --version
     - phpenv versions
-    - ls -l /home/ubuntu/test/
+#    - ls -l /home/ubuntu/test/
 #    - ls -l vendor\phpunit\phpunit\src\Framework\
 #    - ls -l vendor\phpunit\phpunit\src\Framework\TestCase
 
@@ -40,6 +40,8 @@ dependencies:
 
 test:
   override:
+    - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
+    - phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml tests
     - echo Hello World 
     - phpunit testMyClass
     - phpunit sampleTest 

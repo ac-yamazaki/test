@@ -1,6 +1,6 @@
 <?php
 //require_once 'PHPUnit/Autoload.php';
-require_once('SampleTest.php');
+require_once('sample.php');
 use PHPUnit\Framework\TestCase;
 
 class SampleTest extends TestCase
@@ -17,7 +17,7 @@ class SampleTest extends TestCase
    public function testIndex()
     {
         $Sample = new Sample();
-        $this->assertEquals($Sample->helloWorld(), 'hello world!!');
+        $this->assertEquals($Sample->helloWorld(), 'hello world!');
 
     }
 }

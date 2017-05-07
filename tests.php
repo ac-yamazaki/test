@@ -1,7 +1,9 @@
 <?php
 //require_once 'PHPUnit/Autoload.php';
 require_once('sample.php');
-class SampleTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class SampleTest extends TestCase
 {
 //    public function test()
 //     {

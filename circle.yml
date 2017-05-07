@@ -50,7 +50,6 @@ test:
   override:
     - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
     - phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml tests
-    - echo Hello World 
 #    - phpunit testMyClass
 #    - phpunit sampleTest 
 

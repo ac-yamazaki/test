@@ -67,4 +67,3 @@ deployment:
             bucket: test-codedeploy-bucket2
             key_pattern: test/master/test-app-{BRANCH}-{SHORT_COMMIT}
         deployment_group: test-deploy-group
-

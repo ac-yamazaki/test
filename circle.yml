@@ -5,7 +5,6 @@ machine:
 
 dependencies:
   pre: 
-    branch: /m/
     - phpenv versions
     - php -v
     - phpenv global 7.1.3

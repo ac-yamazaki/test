@@ -56,7 +56,7 @@ test:
 
 deployment:
   deploy:
-    branch: /mas*/
+    branch: /mas/
     codedeploy:
       test-app:
         application_root: /

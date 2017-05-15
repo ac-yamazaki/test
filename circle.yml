@@ -56,7 +56,7 @@ test:
 
 deployment:
   deploy:
-    branch: /master/test/*/
+    branch: /maste/
     codedeploy:
       test-app:
         application_root: /

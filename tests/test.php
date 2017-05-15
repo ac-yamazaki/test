@@ -1,3 +1,3 @@
 <?php
-hello world!aaaaaaåß
+hello world!aaaaaaåßßa
 ?>

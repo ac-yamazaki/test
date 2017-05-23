@@ -1,3 +1,70 @@
+machine:
+  timezone: Asia/Tokyo
+  php:
+    version:7.1.3
+
+dependencies:
+  pre: 
+    - phpenv versions
+    - php -v
+    - phpenv global 7.1.3
+    - php -v
+    - phpenv versions
+    - phpunit --version
+#    - ls -l /
+#    - ls -l /opt
+#    - ls -l /var
+#    - ls -l /etc
+#    - ls -l /home
+#    - ls -l /home/ubuntu/
+#    - ls -l /home/ubuntu/test/
+#    - ls -l /home/ubuntu/test/tests.php
+#    - ls -l vendor\phpunit\phpunit\src\Framework\
+#    - ls -l vendor\phpunit\phpunit\src\Framework\TestCase
+
+#    - sudo apt-get update
+#    - sudo apt-get install package=7.1.3
+#    - sudo apt-get update
+#    - sudo apt-get install -y gcc libpcre3-dev
+#    - git clone -b 1.3.5 --depth 1 git@github.com:phalcon/cphalcon.git:
+#    - sed -i "s/phpize /\/home\/ubuntu\/.phpenv\/shims\/phpize /g" cphalcon/build/install
+#    - sed -i "s/configure /configure --with-php-config=\/home\/ubuntu\/.phpenv\/shims\/php-config /g" cphalcon/build/install
+#    - sudo ./install:
+#        pwd: cphalcon/build
+#    - sudo sh -c "echo 'extension=phalcon.so' > /home/ubuntu/.phpenv/versions/5.5.21/etc/conf.d/phalcon.ini"
+#    - sudo composer self-update
+#    - sudo apt-get update
+#    - sudo apt-get install -y gcc libpcre3-dev
+#    - git clone -b 1.3.5 --depth 1 git@github.com:phalcon/cphalcon.git:
+#    - sed -i "s/phpize /\/home\/ubuntu\/.phpenv\/shims\/phpize /g" cphalcon/build/install
+#    - sed -i "s/configure /configure --with-php-config=\/home\/ubuntu\/.phpenv\/shims\/php-config /g" cphalcon/build/install
+#    - ls -l 
+#    - ls -l cphalcon
+#    - sudo ./install:
+#        pwd: cphalcon/build
+#    - sudo sh -c "echo 'extension=phalcon.so' > /home/ubuntu/.phpenv/versions/5.5.21/etc/conf.d/phalcon.ini"
+#    - sudo composer self-update
+
+
 test:
   override:
-    - echo "hii"
+    - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
+    - phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml SampleTest
+#    - phpunit testMyClass
+#    - phpunit sampleTest 
+
+
+deployment:
+  deploy:
+    branch: /m/
+#    branch: /master/
+    codedeploy:
+      test-app:
+        application_root: /
+        region: ap-northeast-1
+        revision_location:
+          revision_type: S3
+          s3_location:
+            bucket: test-codedeploy-bucket2
+            key_pattern: test/master/test-app-{BRANCH}-{SHORT_COMMIT}
+        deployment_group: test-deploy-group
